@@ -1,4 +1,4 @@
-import { loveMessagesCol } from "../../connectDb.js"
+import { loveMessagesCol } from "../gateway/connectDb.js"
 
  const loveMessage = {      
      name: 'Selena',
