@@ -1,10 +1,12 @@
-import { loveMessagesCol } from "./connectDb"
+import express from "express";
+import cors fom 'cors';
 
- const loveMessage = {      
-     name: 'Juliet',
-     message: "Good Night, Good night! Parting is such sweet sorrow, that I shall say good night till it be morrow.",
- }  
+const app = express();
+app.use(cors());
+app.use(express.json());
 
- db.collection('loveMessages').add(loveMessage) 
-    .then(doc => console.log('created love message', doc.id))  
-    .catch(err => console.error(err))  
+
+
+app.listen(5050, () => {
+    console.log('Listening...');
+});
