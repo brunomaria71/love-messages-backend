@@ -31,18 +31,4 @@ export const getAllLoveMessages = async (req, res) => {
   }
 };
 
- export function deleteLoveMessage(req, res) {
-  const { loveMessageId } = req.params;
-  if(!loveMessageId) {
-    res.status(401).send('Invalid request');
-    return;
-  }
-  loveMessagesCol.doc(loveMessageId).delete()
-    .then(() => {
-      res.send('Love Message deleted.');
-    })
-    .catch(err => {
-      res.status(500).send(err);
-    });
-}
 
