@@ -15,15 +15,15 @@ export const addLoveMessage = async (req, res) => {
   } catch (err) {
     res.status(500).send(err);
   }
-};
+}; 
 
 export const getAllLoveMessages = async (req, res) => {
   try {
-    const snapshot = await loveMessagesCol("loveMessages").get();
-    const loveMessagesArray = snapshot.docs.map((doc) => {
+    const snapshot = await loveMessagesCol.get();
+    const loveMessagesArray = snapshot.docs.map(doc => {
       let loveMessage = doc.data();
       loveMessage.id = doc.id;
-      return restaurant;
+      return loveMessage;
     });
     res.send(loveMessagesArray);
   } catch (err) {
@@ -45,3 +45,4 @@ export const getAllLoveMessages = async (req, res) => {
       res.status(500).send(err);
     });
 }
+
