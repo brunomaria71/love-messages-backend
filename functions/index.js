@@ -12,8 +12,8 @@ app.get('/test', (req, res) => {
   res.send('This is actually working!');
 });
 
-app.post('/loveMessage', addLoveMessage);
-app.get('/loveMessages', getAllLoveMessages);
+app.post('/lovemessage', addLoveMessage);
+app.get('/lovemessages', getAllLoveMessages);
 
 
 export const api = functions.https.onRequest(app);

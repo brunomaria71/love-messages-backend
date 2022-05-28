@@ -1,5 +1,5 @@
 import admin from "firebase-admin"; 
-import serviceAccount from "../../../credentials.js"
+import serviceAccount from "../../credentials.js"
 
 admin.initializeApp({ 
   credential: admin.credential.cert(serviceAccount) 
@@ -7,6 +7,6 @@ admin.initializeApp({
 
 const db = admin.firestore();  
 
-export const loveMessagesCol = db.collection('loveMessages'); 
+export const loveMessagesCol = db.collection('love_messages'); 
 
 
